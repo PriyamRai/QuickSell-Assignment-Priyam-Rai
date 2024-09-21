@@ -1,6 +1,3 @@
-# Let's create the README.md file for the user
-
-readme_content = """
 # QuickSell Assignment Priyam Rai NITJ
 
 [View the live project here](https://quick-sell-assignment-priyam-rai.vercel.app/)
@@ -111,14 +108,4 @@ The API returns ticket data in the following format:
 - **Axios**: For making HTTP requests to the API.
 - **Pure CSS**: No external CSS frameworks, only pure CSS for styling.
 
-## Screenshots
-Here’s a quick preview of the application:
 
-- **Group by User**  
-  ![Group by User](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de6f9ade-433a-4185-a6df-4d396ea8be2d/Untitled.png)
-
-- **Group by Priority**  
-  ![Group by Priority](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f8e52ba-2b96-40e8-be6a-34e25dd240eb/Untitled.png)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
