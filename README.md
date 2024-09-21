@@ -1,81 +1,124 @@
-# [Kanban Board Application](https://main.d2nq9mz8ggbsl4.amplifyapp.com)
+# Let's create the README.md file for the user
 
-This is a Kanban board application built using React JS that interacts with the provided API from [https://api.quicksell.co/v1/internal/frontend-assignment](https://api.quicksell.co/v1/internal/frontend-assignment). The application allows users to dynamically adjust the Kanban board based on their grouping and sorting preferences. Users can group tickets by status, user, or priority, and sort the displayed tickets by priority or title. The application also retains the user's view state even after page reload.
+readme_content = """
+# QuickSell Assignment Priyam Rai NITJ
+
+[View the live project here](https://quick-sell-assignment-priyam-rai.vercel.app/)
+
+This project is a Kanban board built using ReactJS. It interacts with an external API and allows users to group and sort tickets by different criteria such as status, assigned user, or priority. It is designed to match the provided design, using only pure CSS.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Grouping and Sorting](#grouping-and-sorting)
+- [API](#api)
+- [Folder Structure](#folder-structure)
+- [Technologies](#technologies)
+- [Screenshots](#screenshots)
+- [License](#license)
 
 ## Features
-
-- Group tickets by status, user, or priority.
-- Sort tickets by priority or title.
-- Visually appealing and responsive design.
-- Ability to save the user's view state in local storage.
-- Priority levels are defined as Urgent (4), High (3), Medium (2), Low (1), and No priority (0).
-
-## Demo
-
-You can see a live demo of the Kanban board application [here](https://main.d2nq9mz8ggbsl4.amplifyapp.com).
+- **Grouping**: Users can group tickets by Status, User, or Priority.
+- **Sorting**: Tickets can be sorted by Priority (descending) or Title (ascending).
+- **Responsive Design**: The application is responsive and adjusts for different screen sizes.
+- **State Persistence**: The application saves the user's last view state (grouping and sorting preferences) even after the page is reloaded.
+- **Pure CSS**: The UI matches the provided design using only pure CSS, no external libraries like Bootstrap or Tailwind.
 
 ## Installation
 
-To run the Kanban board application locally, follow these steps:
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- npm or yarn
 
+### Steps
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/sagarchauhan015/kanban-board.git
-   ```
-
-2. Navigate to the project directory:
-    ```bash
+    \`\`\`bash
+    git clone https://github.com/your-username/kanban-board.git
     cd kanban-board
-    ```
-
-3. Install the required dependencies:
-    ```bash
+    \`\`\`
+2. Install the required dependencies:
+    \`\`\`bash
     npm install
-    ```
-4. Start the development server:
-    ```bash
+    \`\`\`
+3. Start the development server:
+    \`\`\`bash
     npm start
-    ```
-5. Open your web browser and visit http://localhost:3000 to use the application.
-
+    \`\`\`
+4. Open your browser and navigate to \`http://localhost:3000\` to view the app.
 
 ## Usage
+Once the application is loaded:
+- Click on the "Display" button to select how you want to group the tickets (Status, User, Priority).
+- You can also select how to sort the tickets by priority or title.
+- The board will update dynamically based on your selection.
 
-1. Click the "display" button to fetch and display the tickets from the provided API.
+## Grouping and Sorting
+- **Grouping**: 
+  - By Status: Organizes tickets by their current status (e.g., "To Do", "In Progress", "Done").
+  - By User: Organizes tickets by the user assigned to them.
+  - By Priority: Organizes tickets based on their priority level (Urgent, High, Medium, Low, No Priority).
+  
+- **Sorting**:
+  - By Priority: Sorts tickets by their priority, from highest (Urgent) to lowest (No Priority).
+  - By Title: Sorts tickets alphabetically by their title.
 
-2. Select one of the three grouping options: "By Status," "By User," or "By Priority."
+## API
+The app fetches ticket data from the following API endpoint:
+- **API URL**: \`https://api.quicksell.co/v1/internal/frontend-assignment\`
 
-3. Choose the sorting option: "Priority" or "Title."
+The API returns ticket data in the following format:
+\`\`\`json
+[
+  {
+    "id": "1",
+    "title": "Ticket Title",
+    "status": "To Do",
+    "user": "John Doe",
+    "priority": 4 // Urgent
+  },
+  ...
+]
+\`\`\`
 
-4. The Kanban board will dynamically adjust to reflect your choices.
+### Priority Levels
+- **4** - Urgent
+- **3** - High
+- **2** - Medium
+- **1** - Low
+- **0** - No Priority
 
-5. The application will save your view state, so you can return to your preferred settings even after a page reload.
+## Folder Structure
+\`\`\`
+/src
+  /components         # Reusable components for the Kanban Board
+    Board.js          # Displays the Kanban board
+    Card.js           # Displays individual ticket cards
+    Header.js         # Header with display options
+    GroupOptions.js   # Component for choosing grouping and sorting options
+  /styles
+    Board.css         # CSS for Board component
+    Card.css          # CSS for Card component
+    Header.css        # CSS for Header component
+    GroupOptions.css  # CSS for GroupOptions component
+  App.js              # Main application file
+  App.css             # Global styles
+  index.js            # Entry point for React application
+\`\`\`
 
+## Technologies
+- **ReactJS**: Frontend library used to build the UI.
+- **Axios**: For making HTTP requests to the API.
+- **Pure CSS**: No external CSS frameworks, only pure CSS for styling.
 
-## Contributing
+## Screenshots
+Here’s a quick preview of the application:
 
-If you'd like to contribute to this project, please follow these guidelines:
+- **Group by User**  
+  ![Group by User](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de6f9ade-433a-4185-a6df-4d396ea8be2d/Untitled.png)
 
-1. Fork the repository on GitHub.
+- **Group by Priority**  
+  ![Group by Priority](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f8e52ba-2b96-40e8-be6a-34e25dd240eb/Untitled.png)
 
-2. Clone the forked repository to your local machine.
-
-3. Create a new branch for your feature or bug fix:
-
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-4. Make your changes, commit them, and push to your fork.
-
-5. Open a pull request to the original repository, explaining the changes you made.
-
-
-## Contact
-
-If you have any questions, suggestions, or feedback, feel free to contact the project maintainer:
-
-- **Name:** Sagar Chauhan
-- **Email:** [sagarchauhan015@gmail.com](mailto:sagarchauhan015@gmail.com)
-
-
-Enjoy using the Kanban board application to manage your tasks efficiently!
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
